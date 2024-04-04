@@ -27,7 +27,7 @@ public_users.post("/register", (req, res) => {
 public_users.get("/", async function (req, res) {
   try {
     // Make an asynchronous request to fetch the list of books using Axios
-    const response = await axios.get("http://localhost:5000/books");
+    const response = await axios.get("http://localhost:5000");
     const booksData = response.data; // Extract the books from the response data
 
     // Sending the list of books as response

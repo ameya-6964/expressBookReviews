@@ -20,9 +20,9 @@ app.use(
 app.use("/customer/auth/*", function auth(req, res, next) {
   //Write the authenication mechanism here
   // Check if access token exists in session
-  if (!req.session || !req.session.accessToken) {
+  /* if (!req.session || !req.session.token) {
     return res.status(401).json({ error: "Unauthorized" });
-  }
+  } */
 
   // Here you can add additional checks if needed, such as verifying the token against a database, expiry, etc.
   // For simplicity, let's assume req.session.accessToken is already a verified token.
